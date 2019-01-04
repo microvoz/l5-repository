@@ -3,10 +3,9 @@
 $NAMESPACE$
 
 use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use $REPOSITORY$
 use $MODEL$;
-$USE_VALIDATOR$
+use App\Utilities\CustomMethodsRepository\CustomRepository;
 
 /**
  * Class $CLASS$RepositoryEloquent.
@@ -25,14 +24,83 @@ class $CLASS$RepositoryEloquent extends BaseRepository implements $CLASS$Reposit
         return $CLASS$::class;
     }
 
-    $VALIDATOR$
+    /**
+     * Retrieve all data of repository, paginated
+     *
+     * @param array $request
+     * @param null $limit
+     * @param array $columns
+     * @param string $method
+     *
+     * @return mixed
+     */
+    public function allCustom($request, $limit = null, $columns = ['*'], $method = "paginate")
+    {
+        $results = CustomRepository::allCustom($this->model, $request, $limit, $columns, $method);
+        $this->resetModel();
+
+        return $this->parserResult($results);
+    }
 
     /**
-     * Boot up the repository, pushing criteria
+     * Find data by id
+     *
+     * @param       $id
+     * @param array $columns
+     *
+     * @return mixed
      */
-    public function boot()
+    public function find($id, $columns = ['*'])
     {
-        $this->pushCriteria(app(RequestCriteria::class));
+        $results = CustomRepository::findCustom($this->model, $id, $columns);
+        $this->resetModel();
+
+        return $this->parserResult($results);
     }
-    
+
+    /**
+     * Save a new entity in repository
+     *
+     * @param array $attributes
+     *
+     * @return mixed
+     */
+    public function create(array $attributes)
+    {
+        $results = CustomRepository::createCustom($this->model, $attributes);
+        $this->resetModel();
+
+        return $this->parserResult($results);
+    }
+
+    /**
+     * Update a entity in repository by id
+     *
+     * @param array $attributes
+     * @param       $id
+     *
+     * @return mixed
+     */
+    public function update(array $attributes, $id)
+    {
+        $results = CustomRepository::updateCustom($this->model, $attributes, $id);
+        $this->resetModel();
+
+        return $this->parserResult($results);
+    }
+
+    /**
+     * Delete a entity in repository by id
+     *
+     * @param $id
+     *
+     * @return mixed
+     */
+    public function delete($id)
+    {
+        $results = CustomRepository::deleteCustom($this->model, $id);
+        $this->resetModel();
+
+        return $this->parserResult($results);
+    }
 }

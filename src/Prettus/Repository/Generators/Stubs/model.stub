@@ -20,6 +20,6 @@ class $CLASS$ extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = $FILLABLE$;
+    protected $guarded = [];
 
 }
