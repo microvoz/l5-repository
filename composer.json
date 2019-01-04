@@ -1,13 +1,13 @@
 {
-  "name": "prettus/l5-repository",
+  "name": "luisg595/laravel5-repository",
   "description": "Laravel 5 - Repositories to  the database layer",
   "keywords": ["laravel", "repository", "eloquent", "model", "cache"],
   "license": "MIT",
   "authors": [
     {
-      "name": "Anderson Andrade",
-      "homepage": "http://andersonandra.de",
-      "email": "contato@andersonandra.de",
+      "name": "Luis Gonzalez",
+      "homepage": "",
+      "email": "luisg595@gmail.com",
       "role": "Developer"
     }
   ],
