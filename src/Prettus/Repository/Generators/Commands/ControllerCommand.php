@@ -64,15 +64,15 @@ class ControllerCommand extends Command
     public function fire()
     {
         try {
-            // Generate create request for controller
-            $this->call('make:request', [
-                'name' => $this->argument('name') . 'CreateRequest'
-            ]);
+            // // Generate create request for controller
+            // $this->call('make:request', [
+            //     'name' => $this->argument('name') . 'CreateRequest'
+            // ]);
 
-            // Generate update request for controller
-            $this->call('make:request', [
-                'name' => $this->argument('name') . 'UpdateRequest'
-            ]);
+            // // Generate update request for controller
+            // $this->call('make:request', [
+            //     'name' => $this->argument('name') . 'UpdateRequest'
+            // ]);
 
             (new ControllerGenerator([
                 'name' => $this->argument('name'),
