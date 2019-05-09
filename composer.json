@@ -1,23 +1,23 @@
 {
-  "name": "luisg595/l5-repository",
+  "name": "microvoz/l5-repository",
   "description": "Laravel 5 - Repositories to  the database layer",
   "keywords": ["laravel", "repository", "eloquent", "model", "cache"],
   "license": "MIT",
   "authors": [
     {
-      "name": "Luis Gonzalez",
-      "homepage": "https://github.com/luisg595",
-      "email": "luisg595@gmail.com",
+      "name": "Microvoz",
+      "homepage": "https://github.com/microvoz",
+      "email": "soporte@microvoz.com.ar",
       "role": "Developer"
     }
   ],
-  "homepage": "https://github.com/luisg595/l5-repository",
+  "homepage": "https://github.com/microvoz/l5-repository",
   "support": {
-    "email": "luisg595@gmail.com",
-    "issues":"https://github.com/luisg595/l5-repository/issues",
-    "wiki":"https://github.com/luisg595/l5-repository/wiki",
-    "source":"https://github.com/luisg595/l5-repository",
-    "docs": "https://github.com/luisg595/l5-repository"
+    "email": "soporte@microvoz.com.ar",
+    "issues":"https://github.com/microvoz/l5-repository/issues",
+    "wiki":"https://github.com/microvoz/l5-repository/wiki",
+    "source":"https://github.com/microvoz/l5-repository",
+    "docs": "https://github.com/microvoz/l5-repository"
   },
   "require": {
     "illuminate/http": "~5.0",
