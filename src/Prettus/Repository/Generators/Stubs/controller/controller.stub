@@ -49,7 +49,12 @@ class $CONTROLLER$Controller extends Controller
      */
     public function index(Request $request)
     {
-        $$PLURAL$ = $this->repository->allCustom($request);
+       $method = 'paginate';
+        if ($request->has('no-paginate')) {
+            $method = 'get';
+        }
+        
+        $$PLURAL$ = $this->repository->allCustom($request, null, ['*'], $method);
 
         if (request()->wantsJson()) {
             return response()->json($$PLURAL$, $$PLURAL$->status_code);
